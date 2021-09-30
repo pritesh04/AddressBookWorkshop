@@ -23,13 +23,6 @@ List<AddressBook> list = new ArrayList<>();
 		return list.get(id-1);
 	}
 
-	@Override
-	public AddressBook addData(AddressBookDto addressBookDTO) {
-		int id = list.size()+1;
-		AddressBook AddressBook = new AddressBook(id, addressBookDTO);
-		list.add(AddressBook);
-		return AddressBook;
-	}
 
 	@Override
 	public AddressBook updateData(int contactid, AddressBookDto addressBookDTO) {
@@ -45,6 +38,15 @@ List<AddressBook> list = new ArrayList<>();
 	public void deleteData(int id) {
 		list.remove(id-1);
 	}
+	
+	@Override
+	public AddressBook addData(AddressBookDto addressBookDTO) {
+		int id = list.size()+1;
+		AddressBook AddressBook = new AddressBook(id, addressBookDTO);
+		list.add(AddressBook);
+		return AddressBook;
+	}
+
 
 	
 }
