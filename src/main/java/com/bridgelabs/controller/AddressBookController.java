@@ -1,5 +1,7 @@
 package com.bridgelabs.controller;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,27 +13,28 @@ import org.springframework.web.bind.annotation.RestController;
 public class AddressBookController {
 	
 	@GetMapping("/get")
-	public String hello()
+	public ResponseEntity<String> hello()
 	{
-		return "Hello";
+		return new ResponseEntity<String>("Hello " , HttpStatus.OK);
 	}
 	
 	@PutMapping("/put")
-	public String helloPut()
+	public ResponseEntity<String> helloPut()
 	{
-		return "Hello Updated";
+		return new ResponseEntity<String>("Object Updated " , HttpStatus.OK);
 	}
 	
 	@PostMapping("/post")
-	public String helloPost()
+	public ResponseEntity<String> helloPost()
 	{
-		return "Hello created";
+		return new ResponseEntity<String>("Object Added " , HttpStatus.OK);
 	}
 	@DeleteMapping("/delete")
-	public String helloDelete()
+	public ResponseEntity<String> helloDelete()
 	{
-		return "Deleted";
+		return new ResponseEntity<String>("Object Deleted " , HttpStatus.OK);
 	}
+	
 	
 
 }
