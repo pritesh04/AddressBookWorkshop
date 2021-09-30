@@ -32,8 +32,8 @@ List<AddressBook> list = new ArrayList<>();
 	}
 
 	@Override
-	public AddressBook updateData(int contactid, AddressBookDto addressBookDTO) {
-		AddressBook AddressBook = list.get(contactid-1);
+	public AddressBook updateData(int id, AddressBookDto addressBookDTO) {
+		AddressBook AddressBook = list.get(id-1);
 		AddressBook.setAddress(addressBookDTO.getAddress());
 		AddressBook.setFirstName(addressBookDTO.getFirstName());
 		AddressBook.setPhoneNumber(addressBookDTO.getPhoneNumber());
