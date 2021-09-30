@@ -1,5 +1,8 @@
 package com.bridgelabs.dto;
 
+import lombok.Data;
+
+
 public class AddressBookDto {
 
 	public String firstName;
